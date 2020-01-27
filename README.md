@@ -12,7 +12,7 @@ Nous voulons éviter toutes les opérations nécessaires et redondantes pour des
 
 ### Yarn
 ```shell script
-yarnd add -d @inwebo/render.js
+yarn add -d @inwebo/render.js
 ```
 ### NPM
 ```shell script
