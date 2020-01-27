@@ -1,6 +1,6 @@
 {
   "name": "@inwebo/render.js",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Super simple javascript canvas renderer, it abstracts the boring parts.",
   "main": "index.js",
   "keywords": [
@@ -23,12 +23,12 @@
   "license": "GPL-3.0",
   "devDependencies": {
     "@babel/core": "^7.8.3",
+    "@babel/plugin-proposal-class-properties": "^7.8.3",
     "@babel/plugin-proposal-private-methods": "^7.8.3",
     "@babel/preset-env": "^7.8.3",
     "babel-loader": "^8.0.6",
     "webpack": "^4.41.5",
-    "webpack-cli": "^3.3.10",
-    "@babel/plugin-proposal-class-properties": "^7.8.3"
+    "webpack-cli": "^3.3.10"
   },
   "dependencies": {
     "lodash": "^4.17.15"
