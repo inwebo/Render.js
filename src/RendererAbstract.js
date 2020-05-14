@@ -10,7 +10,7 @@ export default class RendererAbstract {
     }
 
     /**
-     * @param {HTMLCanvasElement} canvas
+     * @param {HTMLCanvasElement|HTMLElement} canvas
      */
     constructor(canvas) {
         this._canvas   = canvas;
