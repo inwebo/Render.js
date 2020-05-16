@@ -13,13 +13,13 @@ export default class Renderer2D extends RendererAbstract {
     }
 
     /**
-     * @param {[]} subject
+     * @param {*} subject
      */
     _clear(...subject) {}
 
     /**
      * Must be overrided
-     * @param {[*]} subject
+     * @param {*} subject
      * @protected
      */
     _draw(...subject) {}

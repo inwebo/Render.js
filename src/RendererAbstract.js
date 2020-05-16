@@ -17,13 +17,13 @@ export default class RendererAbstract {
     }
 
     /**
-     * @param {[]} subject
+     * @param {*} subject
      */
     _clear(...subject) {}
 
     /**
      *
-     * @param {[*]} subject
+     * @param {*} subject
      */
     draw(...subject) {
         this.getCtx().save();
@@ -34,7 +34,7 @@ export default class RendererAbstract {
 
     /**
      * Must be overrided
-     * @param {[*]} subject
+     * @param {*} subject
      * @protected
      */
     _draw(...subject) {}
