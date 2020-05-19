@@ -15,7 +15,9 @@ export default class Renderer2D extends RendererAbstract {
     /**
      * @param {*} subject
      */
-    _clear(...subject) {}
+    _clear(...subject) {
+        this.getCtx().clearRect(0,0, this._canvas.width, this._canvas.height);
+    }
 
     /**
      * Must be overrided
