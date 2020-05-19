@@ -2,7 +2,7 @@
   "name": "@inwebo/render.js",
   "version": "0.0.3",
   "description": "Super simple javascript canvas renderer, it abstracts the boring parts.",
-  "main": "index.js",
+  "main": "src/index.js",
   "keywords": [
     "ES6",
     "ES5",
