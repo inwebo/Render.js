@@ -33,7 +33,7 @@ export default class RendererAbstract {
     }
 
     /**
-     * Must be overrided
+     * Must be override
      * @param {*} subject
      * @protected
      */
