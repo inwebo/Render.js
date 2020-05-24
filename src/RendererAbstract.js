@@ -2,7 +2,7 @@ export default class RendererAbstract {
     /**
      * @param {String|null} context 2d|webgl|webgl2|bitmaprenderer
      * @param {Object} contextAttributes
-     * @return {CanvasRenderingContext2D | ImageBitmapRenderingContext | WebGLRenderingContext | WebGL2RenderingContext | RenderingContext}
+     * @return {CanvasRenderingContext2D | ImageBitmapRenderingContext | WebGLRenderingContext | WebGL2RenderingContext | RenderingContext | OffscreenCanvasRenderingContext2D}
      * @see https://developer.mozilla.org/en-US/docs/Web/API/HTMLCanvasElement/getContext
      */
     getCtx(context = null, contextAttributes = {}) {
@@ -10,7 +10,7 @@ export default class RendererAbstract {
     }
 
     /**
-     * @param {HTMLCanvasElement|HTMLElement} canvas
+     * @param {HTMLCanvasElement|HTMLElement|OffscreenCanvas} canvas
      */
     constructor(canvas) {
         this._canvas   = canvas;
