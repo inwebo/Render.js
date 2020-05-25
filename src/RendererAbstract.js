@@ -18,8 +18,8 @@ export default class RendererAbstract {
      */
     draw(...subject) {
         this.getCtx().save();
-        this._clear(subject[0]);
-        this._draw(subject[0]);
+        this._clear(subject);
+        this._draw(subject);
         this.getCtx().restore();
     }
 
