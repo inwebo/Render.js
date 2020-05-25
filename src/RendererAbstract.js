@@ -5,16 +5,7 @@ export default class RendererAbstract {
      * @return {CanvasRenderingContext2D | ImageBitmapRenderingContext | WebGLRenderingContext | WebGL2RenderingContext | RenderingContext | OffscreenCanvasRenderingContext2D}
      * @see https://developer.mozilla.org/en-US/docs/Web/API/HTMLCanvasElement/getContext
      */
-    getCtx(context = null, contextAttributes = {}) {
-        return this._canvas.getContext(context, contextAttributes);
-    }
-
-    /**
-     * @param {HTMLCanvasElement|HTMLElement|OffscreenCanvas} canvas
-     */
-    constructor(canvas) {
-        this._canvas   = canvas;
-    }
+    getCtx(context = null, contextAttributes = {}) {}
 
     /**
      * @param {*} subject
