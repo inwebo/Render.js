@@ -10,7 +10,7 @@ export default class RendererAbstract {
     /**
      * @param {*} subject
      */
-    _clear(...subject) {}
+    _clear(subject) {}
 
     /**
      *
@@ -28,5 +28,5 @@ export default class RendererAbstract {
      * @param {*} subject
      * @protected
      */
-    _draw(...subject) {}
+    _draw(subject) {}
 }
