@@ -1,18 +1,21 @@
 # Render.js
+<img title="Discover Render.js activity on github by Inwebo veritas" alt="Render.js activity by Inwebo veritas" src="https://img.shields.io/github/commit-activity/w/inwebo/Render.js">
+<img title="Discover Render.js repository on github by Inwebo veritas" alt="Render.js repository size by Inwebo veritas" src="https://img.shields.io/github/repo-size/inwebo/Render.js?logo=Render.js">
+<img title="Render.js version on github" alt="Render.js version size by Inwebo veritas" src="https://img.shields.io/github/package-json/v/inwebo/Render.js?logo=Render.js">
+<img title="Render.js version last commit by Inwebo veritas on github" alt="Render.js last activity by Inwebo veritas" src="https://img.shields.io/github/last-commit/inwebo/Render.js">
+
 Super simple javascript canvas renderer, it abstracts the boring parts.
-
-## Objectives
-
-Nous voulons éviter toutes les opérations nécessaires et redondantes pour dessiner sur un context de canvas en 2D.
 
 ## Installations
 
 ### Github
-[Download](https://github.com/inwebo/Render.js.git) and extract the current depot. Include it in your application.
+```shell script
+git clone https://github.com/inwebo/Render.js.git
+```
 
 ### Yarn
 ```shell script
-yarn add -d @inwebo/render.js
+yarn add @inwebo/render.js
 ```
 ### NPM
 ```shell script
@@ -23,8 +26,6 @@ npm install @inwebo/render.js
 * [RendererAbstract](src/RendererAbstract.js) You MUST NOT instance it directly.
 * [Renderer2D](src/Renderer2D.js) The main Renderer.
 
-## Include
-
 #### Plain javascript
 
 ```html
@@ -33,7 +34,7 @@ npm install @inwebo/render.js
 
 #### ES6
 
-You should really consider to use it like an ES6 class
+You should really consider using it like an ES6 module
 
 ```ecmascript 6
 import Renderer2D from "@inwebo/render/";
