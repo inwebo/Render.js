@@ -29,4 +29,14 @@ export default class RendererAbstract {
      * @protected
      */
     _draw(subject) {}
+
+    /**
+     * @param {boolean} enabled you can enable / disable canvas smoothing
+     */
+    setSmoothing(enabled = true) {
+        this.getCtx().mozImageSmoothingEnabled    = enabled;
+        this.getCtx().webkitImageSmoothingEnabled = enabled;
+        this.getCtx().msImageSmoothingEnabled     = enabled;
+        this.getCtx().imageSmoothingEnabled       = enabled;
+    }
 }
