@@ -1,46 +1,46 @@
 import RendererAbstract from "./RendererAbstract";
 
 export default class RenderOffScreen extends RendererAbstract {
-
     /**
      * @inheritDoc
      */
-    getCtx(context = '2d', contextAttributes = {alpha: true}) {
-        return this._offScreen.getContext(context, contextAttributes);
+    setCtx(context = 'bitmaprenderer', contextAttributes = null) {
+        super.setCtx(context, contextAttributes);
     }
 
     /**
-     * @return {ImageBitmap}
+     * @return OffscreenCanvasRenderingContext2D
      */
-    getOffScreenImageBitmap() {
-        return this._offScreen.transferToImageBitmap();
-    }
-
-    /**
-     * @param contextId
-     * @param {Object} contextAttributes
-     */
-    drawOffScreenCanvas(contextId = '2d', contextAttributes = {alpha: true}) {
-        this.getCtx(contextId).drawImage(this._image, 0, 0);
+    getCtx() {
+        return super.getCtx();
     }
 
     /**
      * @param {HTMLCanvasElement|HTMLElement} canvas
-     * @param {HTMLImageElement} image
-     * @param {boolean} draw Will draw image source
+     * @param {number} dx
+     * @param {number} dy
+     * @see https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/drawImage
      */
-    constructor(canvas, image, draw = true) {
-        super();
-        this._canvas    = canvas;
-        this._offScreen = new OffscreenCanvas(image.width, image.height);
-        this._image     = image;
-
-        if(draw) {
-            this.drawOffScreenCanvas();
-        }
+    drawToCanvas(canvas, dx = 0, dy = 0) {
+        canvas.getContext('2d').drawImage(this._image, dx, dy);
     }
 
+    /**
+     * @param {HTMLImageElement} image
+     * @param {Object} contextAttributes
+     */
+    constructor(image, contextAttributes = {alpha: true}) {
+        super();
+        this._canvas = new OffscreenCanvas(image.width, image.height);
+        this._image  = image;
+        this.setCtx('bitmaprenderer', contextAttributes);
+    }
+
+    /**
+     * @param {*} subject
+     * @private
+     */
     _draw(...subject) {
-        this._canvas.getContext('bitmaprenderer').transferFromImageBitmap(this.getOffScreenImageBitmap());
+        this._canvas.getCtx().transferFromImageBitmap(this._canvas.transferToImageBitmap());
     }
 }

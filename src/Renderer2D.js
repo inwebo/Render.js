@@ -1,24 +1,34 @@
 import RendererAbstract from "./RendererAbstract";
 
 export default class Renderer2D extends RendererAbstract {
-
     /**
-     * @param {String|null} context 2d|webgl|webgl2|bitmaprenderer
+     * @param {String|null} context 2d
      * @param {Object} contextAttributes
+     *
      * @see https://developer.mozilla.org/en-US/docs/Web/API/HTMLCanvasElement/getContext
-     * @override
-     * @return {CanvasRenderingContext2D}
      */
-    getCtx(context= '2d', contextAttributes = {alpha: true}) {
-        return this._canvas.getContext(context, contextAttributes);
+    setCtx(context= '2d', contextAttributes = {alpha: true}) {
+        this._ctx = this._canvas.getContext(context, contextAttributes);
     }
 
     /**
-     * @param {HTMLCanvasElement|HTMLElement|OffscreenCanvas} canvas
+     * @override
+     * @return {CanvasRenderingContext2D}
      */
-    constructor(canvas) {
+    getCtx() {
+        return this._ctx;
+    }
+
+    /**
+     * @param {HTMLCanvasElement|HTMLElement} canvas
+     * @param {Object} contextAttributes
+     *
+     * @see https://developer.mozilla.org/en-US/docs/Web/API/HTMLCanvasElement/getContext
+     */
+    constructor(canvas, contextAttributes = {alpha: true}) {
         super();
         this._canvas = canvas;
+        this.setCtx('2d', contextAttributes);
     }
 
     /**
@@ -34,4 +44,15 @@ export default class Renderer2D extends RendererAbstract {
      * @protected
      */
     _draw(...subject) {}
+
+    /**
+     * @param {boolean} enabled Enable or disable canvas smoothing, default true
+     * @see https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/imageSmoothingEnabled
+     */
+    setSmoothing(enabled = true) {
+        this.getCtx().mozImageSmoothingEnabled    = enabled;
+        this.getCtx().webkitImageSmoothingEnabled = enabled;
+        this.getCtx().msImageSmoothingEnabled     = enabled;
+        this.getCtx().imageSmoothingEnabled       = enabled;
+    }
 }
