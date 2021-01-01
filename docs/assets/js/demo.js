@@ -5,8 +5,7 @@ window.addEventListener("DOMContentLoaded", (event) => {
     const image  = new Image();
 
     image.onload = (e) => {
-        const offscreenCanvas = new RenderOffScreen(image);
-        offscreenCanvas.drawToCanvas(canvas);
+        (new RenderOffScreen(image)).drawToCanvas(canvas);
     };
 
     image.src = 'assets/img/welcome.png';
