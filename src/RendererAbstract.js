@@ -32,6 +32,7 @@ export default class RendererAbstract {
 
     /**
      * @param {boolean} enabled you can enable / disable canvas smoothing
+     * @see https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/imageSmoothingEnabled
      */
     setSmoothing(enabled = true) {
         this.getCtx().mozImageSmoothingEnabled    = enabled;
