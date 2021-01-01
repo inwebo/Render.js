@@ -32,6 +32,7 @@
     "webpack-cli": "^3.3.10"
   },
   "dependencies": {
-    "@inwebo/assetsloader.js": "^0.0"
+    "@inwebo/assetsloader.js": "^0.0",
+    "serve": "^11.3.2"
   }
 }
