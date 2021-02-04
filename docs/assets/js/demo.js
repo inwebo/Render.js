@@ -4,7 +4,8 @@ window.addEventListener("DOMContentLoaded", (event) => {
     const canvas = document.getElementById('sprite');
     const image  = new Image();
 
-    image.onload = (e) => {
+    image.onload = (e) =>
+    {
         (new RenderOffScreen(image)).drawToCanvas(canvas);
     };
 
