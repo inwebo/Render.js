@@ -37,7 +37,7 @@ npm install @inwebo/render.js
 You should really consider using it like an ES6 module
 
 ```ecmascript 6
-import Renderer2D from "@inwebo/render/";
+import Renderer2D from "@inwebo/render";
 ```
 Now the class Renderer2D is available.
 

@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunk_inwebo_render_js=self.webpackChunk_inwebo_render_js||[]).push([[179],{880:()=>{console.log("docs/index.js")}},e=>{e(e.s=880)}]);
