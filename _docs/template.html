@@ -1,16 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="x-ua-compatible" content="ie=edge" />
-    <link rel="stylesheet" href="https://unpkg.com/mustard-ui@latest/dist/css/mustard-ui.min.css">
-    <title><%= htmlWebpackPlugin.options.title %></title>
-  </head>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+  <link rel="stylesheet" href="https://unpkg.com/mustard-ui@latest/dist/css/mustard-ui.min.css">
+  <title><%= htmlWebpackPlugin.options.title %></title>
+  <meta name="description" content="<%= description %>"/>
+  <link rel="canonical" href="index.html" />
+
+  <!-- PrismJS: Syntax Highlighting -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.13.0/themes/prism.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.13.0/prism.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.13.0/plugins/normalize-whitespace/prism-normalize-whitespace.js"></script>
+
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="<%= htmlWebpackPlugin.options.title %>" />
+  <meta property="og:description" content="<%= description %>" />
+  <meta property="og:url" content="<%= docs %>" />
+  <meta property="og:site_name" content="<%= name %>" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="<%= htmlWebpackPlugin.options.title %>" />
+  <meta name="twitter:description" content="<%= description %>" />
+  <meta name="twitter:site" content="<%= name %>" />
+  <meta name="twitter:creator" content="<%= author %>" />
+</head>
 
   <body>
   <header>
-    <canvas id="mario-sheet" style="border: black solid 10px; display: none" width="50" height="32"></canvas>
     <h1 class="title"><%= htmlWebpackPlugin.options.title %></h1>
     <h2 class="subtitle"><%= description %></h2>
     <p class="disclaimer">
